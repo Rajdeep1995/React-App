@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Added a neutral background */
+}
+
+.con {
+    height: 700px;
+    width: 1000px;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card1, .card2 {
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer; /* Indicating interactivity */
+    transition: transform 0.2s ease-in-out;
+}
+
+.card1:hover, .card2:hover {
+    transform: scale(1.05);
+}
+
+.card1 img, .card2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bt {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    margin: 20px auto; /* Add margin for spacing and center horizontally */
+    text-align: center; /* Center text within the container */
+  }
+  
+  #bt1 {
+    padding: 10px 20px; /* Add padding to the button */
+    font-size: 16px; /* Set button font size */
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Add rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+    margin-bottom: 10px; /* Spacing between button and paragraphs */
+  }
+  
+  #bt1:hover {
+    background-color: #3e8e41; /* Darker green on hover */
+  }
+  
+  .bt p {
+    font-size: 14px; /* Paragraph font size */
+    margin: 5px 0; /* Add margin to paragraphs */
+    color: #555; /* Paragraph text color */
+  }
+
+/* Heart image styling */
+.img {
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Initially hidden */
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Basic paragraph styling */
+p {
+    font-family: sans-serif; /* Example font */
+    font-size: 16px; /* Example font size */
+    line-height: 1.5; /* Example line spacing */
+    color: #333; /* Example text color */
+    margin-bottom: 10px; /* Example spacing between paragraphs */
+  }
+  
+  /* Example: Styling paragraphs within a specific container */
+  .con p { /* Selects p tags that are children of elements with class "con" */
+      font-weight: bold;
+      color: blue;
+  }
+  
+  /* Example: Styling the first paragraph */
+  p:first-of-type {
+      text-decoration: underline;
+  }
+  
+  /* Example: Styling the last paragraph */
+  p:last-of-type {
+      color: red;
+  }
+  
+  /* Example: Styling paragraphs with a specific class */
+  p.highlighted {
+    background-color: yellow;
+    padding: 5px;
+    border-radius: 3px;
+  }
+  
+  /* Example: Styling paragraphs with a specific ID */
+  #myParagraph {
+    font-style: italic;
+    text-align: center;
+  }
+  
+  /* Example: Responsive paragraph styling */
+  @media (max-width: 600px) {
+      p {
+          font-size: 14px; /* Smaller font on smaller screens */
+      }
+  }
