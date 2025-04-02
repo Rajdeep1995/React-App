@@ -35,7 +35,7 @@ function App() {
     setIsVisible1(true);
     setTimeout(() => {
       setIsVisible1(false);
-    }, 3000);
+    }, 2000);
   };
 
   const like2 = () => {
@@ -43,7 +43,7 @@ function App() {
     setIsVisible2(true);
     setTimeout(() => {
       setIsVisible2(false);
-    }, 3000);
+    }, 2000);
   };
 
   return (
